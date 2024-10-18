@@ -23,7 +23,7 @@ int Image::GetHeight() const
 
 int Image::GetWidth() const
 {
-    return m_width;
+    return m_width; // todo сделать хранилище для добавляемых изображений
 }
 
 std::string Image::GetPath() const

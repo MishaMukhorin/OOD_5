@@ -28,9 +28,9 @@ public:
     {}
 
 protected:
-    void DoExecute();
+    void DoExecute() override;
 
-    void DoUnexecute();
+    void DoUnexecute() override;
 
 private:
     std::vector<DocumentItem>& m_documentItems;

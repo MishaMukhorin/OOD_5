@@ -21,7 +21,7 @@ std::shared_ptr<IParagraph> Document::InsertParagraph(const std::string &text, s
 {
     return InsertParagraphImpl(text, position);
 }
-
+ // todo написать тесты для документа
 void Document::ReplaceText(const std::string &newText, std::optional<size_t> position)
 {
     m_history.AddAndExecuteCommand(std::make_unique<ReplaceTextCommand>

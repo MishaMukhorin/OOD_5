@@ -22,8 +22,6 @@ public:
     void Exit();
 
 private:
-    void ExecuteCommand(const std::string & command);
-
     struct Item
     {
         Item(std::string  commandName, std::string  description, Command  command)
@@ -36,9 +34,11 @@ private:
         std::string description;
         Command command;
     };
+
     std::vector<Item> m_items;
     bool m_exit = false;
-    bool m_forceExit = false;
+
+    void ExecuteCommand(const std::string & command);
 };
 
 

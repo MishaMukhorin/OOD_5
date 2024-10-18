@@ -21,6 +21,7 @@ public:
                        int newWidth, int newHeight,
                        std::optional<size_t> position)
             : m_documentItems(documentItems), m_newHeight(newWidth), m_newWidth(newHeight), m_position(position) {};
+
 protected:
     void DoExecute() override;
     void DoUnexecute() override;

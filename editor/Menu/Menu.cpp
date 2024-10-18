@@ -10,7 +10,7 @@ void Menu::AddItem(const std::string & commandName, const std::string & descript
     m_items.emplace_back(commandName, description, command);
 }
 
-void Menu::Run()
+void Menu::Run() // todo разобратьс€ кто кем €вл€етс€ в паттерне команда
 {
     ShowInstructions();
 

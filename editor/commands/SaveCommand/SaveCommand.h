@@ -14,6 +14,7 @@
 #include "../../document/DocumentItem.h"
 #include "../AbstractCommand/AbstractCommand.h"
 
+// todo сделать другим типом команды
 class SaveCommand : public AbstractCommand
 {
 public:

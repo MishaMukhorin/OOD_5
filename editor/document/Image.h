@@ -24,6 +24,7 @@ public:
     void Resize(int width, int height) override;
 
 private:
+
     std::string m_path;
     int m_height;
     int m_width;

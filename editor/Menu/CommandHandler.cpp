@@ -30,23 +30,21 @@ void CommandHandler::AddMenuItem(const std::string &commandName, const std::stri
 
 void CommandHandler::List(std::istream &)
 {
+    std::cout << "Title " << m_document.GetTitle() << "\n";
+
+    for (int i = 0; i < m_document.GetItemsCount(); i++)
     {
-        std::cout << "Title " << m_document.GetTitle() << "\n";
-
-        for (int i = 0; i < m_document.GetItemsCount(); i++)
+        auto documentItem = m_document.GetItem(i);
+        auto paragraph = documentItem.GetParagraph();
+        if (paragraph != nullptr)
         {
-            auto documentItem = m_document.GetItem(i);
-            auto paragraph = documentItem.GetParagraph();
-            if (paragraph != nullptr)
-            {
-                std::cout << (i) << ". Paragrpah: " << paragraph->GetText() << "\n";
-            }
+            std::cout << (i) << ". Paragrpah: " << paragraph->GetText() << "\n";
+        }
 
-            auto image = documentItem.GetImage();
-            if (image != nullptr)
-            {
-                std::cout<< (i) << ". Image: " << image->GetWidth() << " " << image->GetHeight() << " " << image->GetPath() << "\n";
-            }
+        auto image = documentItem.GetImage();
+        if (image != nullptr)
+        {
+            std::cout<< (i) << ". Image: " << image->GetWidth() << " " << image->GetHeight() << " " << image->GetPath() << "\n";
         }
     }
 }
