@@ -11,7 +11,7 @@ void ResizeImageCommand::DoExecute()
         throw std::invalid_argument("This command needs position to operate");
     }
 
-    if (m_position.value() > m_documentItems.size())
+    if (m_position.value() >= m_documentItems.size())
     {
         throw std::invalid_argument("Not existing position");
     }
@@ -36,7 +36,7 @@ void ResizeImageCommand::DoUnexecute()
         throw std::invalid_argument("This command needs position to operate");
     }
 
-    if (m_position.value() > m_documentItems.size())
+    if (m_position.value() >= m_documentItems.size())
     {
         throw std::invalid_argument("Not existing position");
     }
