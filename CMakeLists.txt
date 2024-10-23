@@ -60,6 +60,9 @@ set(TEST_SOURCE_FILES
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
+add_executable(robot robot/main.cpp)
+
+
 add_executable(${PROJECT_NAME}_test ${TEST_SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME}_test gtest_main gmock gtest)
 enable_testing()
